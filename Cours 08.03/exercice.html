@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" 
+               name="letter" 
+               minlength="1" 
+               maxlength="1"
+               onkeyup="minOuMaj(this.form);">
+    </form>
+<div id="res"></div>
+
+<script>
+  // demander à l'utilisateur d'entrez une lettre au clavier 
+  // verifier ce que l'utilisateur à entrer 
+  const res = document.getElementById('res'); //récupère un élèment en dehors du formulaire 
+  function minOuMaj(form){
+      const letter = form.letter.value;
+      if (letter ==='')return;
+      if (letter >= "a" && letter <="z"){
+          res.innerHTML = '<p> c\'est une lettre minuscule </p>' // inner = à l'interieur de la balise tu viens mettre quelque chose 
+      }else if (letter >= "A" && letter <="Z"){
+          res.innerHTML = '<p> c\'est une lettre majuscule </p>'
+      }else{
+          res.innerHTML = '<p> ce n\'est pas une lettre </p>'
+      }
+    }
+
+   
+</script>
+</body>
+</html>

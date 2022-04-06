@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="checkbox" name="cgv" onclick="checkbox(this);">
+        </div>
+        <div>
+            <input type="radio" name="civ" value="m">
+            <input type="radio" name="civ" value="mme">
+        </div>
+        <div>
+            <select name="ville" onchange="select(this)">
+                <option value="fr">France</option>
+                <option value="be">Belgique</option>
+                <option value="ch">Suisse</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        function checkbox(input){
+            console.log(input.checked);
+            console.log(input.defaultChecked);
+            console.log(input.name);
+            console.log(input.value);
+        }
+       // function inputName(event){
+           // console.log(event.target.value);
+       // }
+        //type de l'event , callback (fonction qui na pas de parenthèse)
+        //document.forms[0].name.addEventListener('keyup',inputName);
+        // quand on met des parenthese dans une fonction il execute seulement une partie
+       // une fonction est executer quand on lui met les parenthèses 
+
+       test();
+       function select(s){
+           console.log(s.value);
+           console.log(s.selectedIndex);
+           console.log(s.option[selectedIndex]);
+       }
+    </script>
+</body>
+</html>

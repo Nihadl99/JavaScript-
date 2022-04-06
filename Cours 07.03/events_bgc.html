@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changeBgc('black');">Noir</button>
+    <button onclick="changeBgc('yellow');">Jaune</button>
+    <button onclick="changeBgc('pink');">Rose</button>
+
+    <form action="" name="Formulaire_test"> <!-- dans la premiere methode il y a pas de "name"-->
+        <input type="text" 
+               name="prenom" 
+               id="prenom"
+               onfocus="f(this.form);"
+               onblur="f1(this.form);"
+               onkeyup="texte(this.form);"
+               onmouseenter="mouseHover();"
+               onmouseleave="mouseleave();"
+               >
+               
+               
+    <output name="out"></output>
+        <!-- this = permet de récuperer l'input-->
+        <!-- this.form = permet de recuperer un formulaire complet -->
+    </form>
+    
+
+    <script>
+        // 1er methode pour récuperer un formulaire 
+        function changeBgc(color){
+            document.body.style.backgroundColor = color
+            // pas de  - mettre en kemelkeys
+        }
+        function f(form){
+            form.prenom.style.backgroundColor = 'red';
+
+        }
+        function f(form){
+            form.prenom.style.backgroundColor = 'violet';
+
+        }
+        function texte(form){
+            const val = form.prenom.value;
+            form.out.innerText = val;
+        }
+
+        // 2eme methode pour récupérer les formulaires 
+        function mouseHover () {
+            document.formulaire_test.prenom.style.backgroundColor = 'yellow';
+
+        }
+
+        // lorsuque l'on ecrit du style : le style se met directement dans la balise et c'est elle qui est prioritaire
+
+        // 3eme technique pour recupere un tableau et toutes les informations à l'interieur
+        function mouseleave(){
+            // on veut recupere le formulaire sans toucher HTML
+            document.forms[0].prenom.style.backgroundColor = 'white'; //tableau de formulaire
+        }
+    </script>
+</body>
+</html>

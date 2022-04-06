@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+       <h1>Test des opérateurs élémentaires</h1>
+       <h3>Entrez vos données</h3>
+       <hr>
+      <form action="">
+           <div>
+              <label for="R1">Premier nombre réel R1 = </label> 
+              <input type="text" name="R1" id="R1" value="12.5">
+           </div>   
+           <br>
+              <button type="button"  
+                      name="calcul" 
+                      onclick="calculer(this.form);">Calculer</button>
+            <br>
+            <div>
+               <label for="nom">Deuxième nombre réel R2 =</label>
+               <input type="text" name="R2" id="R2" value="24.12">
+            </div>
+
+        <h3>Résultats</h3>
+        <textarea name="res"  cols="50" rows="5"></textarea>
+      </form>
+
+
+   </center>
+   <script>
+       function calculer(formulaire){
+           let R1 = parsefloat(form.R1.value);
+           const R2 = parsefloat(form.R2.value);
+          
+           let c = R1
+           form.res.value = toStr("+",R1 += R2);// R1 = R1 + R2
+           R1 = c;
+           form.res.value += toStr("*",R1 += R2);// R1 = R1 * R2
+           R1 = c;
+           form.res.value += toStr("/",R1 /= R2);// R1 = R1 / R2
+           R1 = c;
+           form.res.value += toStr("%",R1 %= R2);// R1 = R1 % R2
+       }
+       function toStr(op,res){
+           //return "Après l'opération R1" + op + "R2,R1 a pour valeur " + res;
+           return ` Après l'opération R1" + op + "R2,R1 a pour valeur ${res}`;
+
+       }
+   </script>
+</body>
+</html>

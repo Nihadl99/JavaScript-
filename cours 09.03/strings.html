@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const texte = 
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt enim quasi fuga laudantium nobis vero quisquam, deleniti in autem unde, laboriosam fugiat pariatur nisi. Tempora vel aliquam eligendi. Corporis!';
+
+        document.writeln(texte.length.toString() + "<br>");
+        document.writeln( texte.substring(0,10)+'<br>');
+        document.writeln( texte.charAt(0)+'<br>');
+        document.writeln( texte.toLocaleLowerCase()+'<br>');
+        document.writeln( texte.toUpperCase()+'<br>');
+
+        const sp = texte.split(" ") //il rempli un tableau 
+        for (let i = 0; i < sp.length; i++) {
+            sp[i] = sp [i].charAt(0).toUpperCase() + sp[i].substring(1);
+        }
+        texte = sp.join(" ");
+        document.writeln(texte + '<br>');
+    </script>
+</body>
+</html>

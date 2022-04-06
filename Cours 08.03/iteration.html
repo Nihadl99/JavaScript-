@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //for ( let i = 0; i < 20; i++){ //pour i = 0 tant que i<20 faire i+1
+        //    if(i% 3 ===0){ //si c'est un multiple de 3 tu continues 
+        //       continue;
+        //    }
+        //    if (i === 17){ //si i = 17 tu coupes 
+        //       break;
+        //   }
+        //    document.write(`<h4>${i}</h4>`);
+
+        // }
+
+
+ // création d'un tableau en js
+ const tab1 = ["sam","herve","sab","anto"];
+ //on souhaite faire une boucle sur le tableau 
+ //for(let i = 0; i< tab1.length;i++){
+ //    document.writeln(tab1[i]); //writeln pour que les élèments ne soit pas collé 
+
+     
+ //}
+ // le for of il est fait pour les tableaux , c'est une manière plus rapiode et dispo depuis es6
+ //for (const prenom of tab1) {
+ // document.writeln(prenom);
+    
+ //}
+
+ //technique pour crée un objet en js
+ const p1 = {
+     nom: "lazaar",
+     prenom: "Nihad",
+     age: "21",
+     hobbies: ["voyage","informatique","manger"],
+     femme:true
+ };
+ document.writeln(p1.prenom);
+
+ //for in 
+ for (const k in p1){ //p1 récupére la clé (k) de chaque éléments 
+     document.writeln(`key: ${k} - value : ${p1[k]}<br>`);
+ }
+    </script>
+</body>
+</html>

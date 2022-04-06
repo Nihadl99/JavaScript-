@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cours du 7 mars 2022</title>
+</head>
+<body>
+    <p>Alors que celui-là provient de la section body du document html.</p>
+    <script>
+        document.write('Ce texte est écrit pas une instruction JavaScript.');
+        
+        alert('je suis une alerte');
+
+        // le concosle log :
+        console.log("je suis un logo dans une console");
+
+        // Exercice : définir la fonction carré() qui calcule et affiche le carré du nombre qui lui est passé en argument :
+        function carre(nombre){
+            console.log(nombre*nombre) ;
+        }
+        carre(4); // version procedure 
+
+        function carre(nombre = 1){
+            console.log(typeof nombre); // retourne 
+            return nombre*nombre ;
+        }
+        console.log(carre(4));
+
+
+        function testParam ( a = 2, b ){
+            console.log(a,b)
+        }
+        testParam(10); // les paramètres optionels sont à mettre à la fin -> (b , a = 2)
+
+        // difference entre une procedure et une fonction 
+        // procedure = return , elle ne retourne rien 
+        //une fonction = elle retourne quelque chose 
+        //nombre = 1 ( valeur par défaut , paramètre optionel)
+        // typeobject / typeone /typebouléen /string / number / undefine / nul
+
+        //Var v1 = "coucou"; // declare une variable 
+        let v2; // nouveau va à partir de ES6 
+        const v3 = 12  // constante 
+        // 3 mots clés pour crée les variables 
+
+    </script>
+</body>
+</html>

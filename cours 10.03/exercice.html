@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="anii">Entrez votre date d'anniversaire</label>
+        <input type="date" 
+               name="anni" 
+               id="anni"
+               onchange="anniversaire(this.form)">
+    </form>
+    <div id="res"></div>
+    <script>
+        //- je souhaite avoir un formulaire avec un input qui demande la date à l’utilisateur et un petit 
+        //  label pour informer ce qu’il doit indiquer.
+
+
+        //- Nous allons vérifier, lorsque l’input change, dans combien de temps est son anniversaire. 
+        //  Nous n’allons vérifier que les mois et jours. Nous ne vérifirons pas l’année.
+
+        //on recupère les infos 
+
+        const res = document.getElementById('res');
+
+        function anniversaire(form){
+            const anni = new Date(form.anni.value);
+            const today = new Date();
+
+            const bMonth = anni.getMonth();
+            const bDay = birthday.getDate();
+            console.log(bMonth , bDay);
+        }
+
+        
+        
+        //- Le but est d’afficher un message à l’utilisateur dans une div avec un id, que vous choisirez.
+
+    </script>
+</body>
+</html>

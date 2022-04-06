@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="chargement();"
+       onunload="dechargment()"
+       onre>
+
+    <img src="https://pocsum.photos/3000" alt="">
+
+    <script>
+        function chargement(){
+            document.write("document chargée");
+        }
+        function dechargement(){
+            document.writeln("document chargée");
+        }
+        function dechargement(){
+            alert('veux-tu quitter le site ?');
+        }
+        function redimenssionner(){
+            document.writeln(window.innerWidth + ' ' + window.innerHeight);
+        }
+        window.addEventListener('resize',redimenssionner);
+    </script>
+    
+</body>
+</html>

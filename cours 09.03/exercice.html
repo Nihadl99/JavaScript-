@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  -il faut un champ input et un buton afin de valider mes taches 
+        - Recupère un valeur de mon champ input lorsque je clique sur le bouton valider 
+        - Stocker chaque nouvelle tâche dans une liste .optionnel
+        - losque je clique , mettre egalement à jour un div ayant l'id TODOLIST avec toutes mes tâches à l'interieur-->
+        <center>
+       <h3>Bienvenue dans l'exercice du jour 3 🥳</h3>
+       <hr>
+        <form action="">
+            <div>
+               <input type="text" 
+                      name="todo"
+                >
+            </div>   
+        <button type="button" onclick="ajouterTache(this.form);">Ajoutez une tâche</button>
+        
+        </form>
+        <div id="todoList"></div>
+    
+    </center>
+    <script>
+        //pour recuperer le formulaire 
+        function ajouterTache(form){
+            const todo = form.todo.value; // dans le form il y a un todo donc recupere la valeur
+            document.getElementById("todoList").innerHTML +=`<p>${todo}</p>`
+            //on recupere l'element par sont id et l'element c'est todoliste et avec le inner on renvoie des information a l'interieur de todo
+            form.todo.value = '';
+            form.todo.focus(); 
+        }
+        
+
+    
+        
+
+    </script>
+</body>
+</html>

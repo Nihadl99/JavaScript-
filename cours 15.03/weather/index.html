@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<style>
+
+body {
+    background: linear-gradient(0deg, rgb(137, 138, 138) 0%, rgb(233, 233, 231) 100%);
+}
+
+main{
+  background: linear-gradient(0deg, rgb(144, 145, 145) 0%, rgb(253, 253, 251) 100%);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: (--bg-color);
+  border-radius: 40px;
+  box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(0, 0, 0, 0.25);
+  display: block;
+  flex: 1;
+  min-height: 500px;
+  max-width: 350px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  padding: 30px;
+  
+}
+h1{
+    color: #067CF8;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3em;
+
+    
+}
+.city{
+
+}
+div.search{
+
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    
+}
+#btn_search{
+    color: #067CF8;
+    display: block;
+    
+    font-size: 15px;
+    margin: 15px 0 0;
+    padding: 0px 0;
+    width: 30%;
+
+    
+
+    
+}
+
+
+ul>li{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 10px 0;
+    text-align:center;
+    border-radius: 30px;
+    color: white;
+    box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(248, 248, 248, 0.25);
+    background: linear-gradient(0deg, rgb(202, 219, 238) 0%, rgba(255,255,255,0.12860915492957747) 100%);
+
+}
+
+div.wind{
+    margin-left: auto;
+    margin-right: auto;
+    width: 3em;
+
+  
+}
+p{
+    color: white;
+}
+p.span{
+
+}
+P.weather_deg{
+
+    color: #6D6E74;
+    font-size: 22px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+
+}
+</style>
+<main>
+	<div class="search">
+		<input type="search" id="city" placeholder="Choisir une ville">
+		<button id="btn_search">Rechercher</button>
+	</div>
+
+	<div id="weather"></div>
+</main>
+
+<script src="main.js" type="module"></script>
+</body>
+</html>

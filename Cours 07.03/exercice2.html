@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+      <div>
+           <input type="text" name="op">
+                <button type="radio" onclick="calcul(this.form);">Calculer</button>
+    
+            <input type="text" name="res">
+      </div>
+    </form>
+
+    <script>
+       function calcul(formulaire){
+           formulaire.res.value = eval(formulaire.op.value);
+       }
+
+       let age=18
+       let message = (age > 17) ? "majeur":"majeur";
+    </script>
+</body>
+</html>

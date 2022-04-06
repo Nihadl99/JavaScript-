@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Formulaire</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Entrez votre nom</label>
+        <input type="text">
+
+    </form>
+    <br>
+    <form action="">
+        <label for="nom">Entrez votre adresse e-mail</label> 
+        <input type="email" name="email" id ="email">
+    </form>
+    <br>
+    <div>
+        <span>Connaissez-vous Mediaforma?</span>
+        <label for="yes">OUI</label> 
+        <input type="radio" name="question" id="yes" value="yes">
+        <label for="yes">NON</label> 
+        <input type="radio" name="question" id="no" value="no">
+
+    </div>
+
+    <br>
+    <button type="submit">Envoyer</button>
+    <button type="reset">Annuler</button>
+    <button type="button" onclick="toUpper(this.form);">Majuscules</button>
+
+    <script>
+        //pour mettre en majuscule lorsque l'on appuie sur le boutton "Majuscule"
+        function toUpper(Formulaire) {
+        Formulaire.email.value =
+            Formulaire.email.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

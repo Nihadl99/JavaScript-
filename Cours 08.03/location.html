@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="liste"></ul>
+    </div>
+    <button onclick="history.back();">précédent</button> <!--revenir en arriere-->
+    <script>
+        console.log(location); //enfant de window on est pas obliger de mettre window avant 
+        //location a des atribus qu'on peut voir dans le controle
+        //location.href ='https://google.fr';//pour changer l'url 
+        //pour afficher une liste avec tout les location à l'interieur 
+        const liste = document.getElementById('liste');
+        debugger
+        liste.innerHTML = `
+                        <li>Protocole : ${location.protocol}</li> 
+                        <li>Hostname : ${location.hostname}</li>
+                        <li>Port : ${location.Port}</li>
+                        <li>Pathname : ${location.pathname}</li>`;
+    // en 1 seul ligne le debuger va tout afficher  
+    // pour ajouter du hmtl a partir du js 
+
+    console.log(history);
+
+    //autre technique :
+    const li = document.createElement('li');
+    li.innerHTML = "protocol : " + location.protocol
+    </script>
+</body>
+</html>

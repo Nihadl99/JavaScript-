@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.writeln(localStorage.length + '<br>');
+        //pour entrer le nom d'un site 
+        localStorage.setItem('title','Test Local storage'); //2 parametres pour un set 
+        localStorage.setItem('age', "40");
+        const prenoms = ["sam", "imane","thomas","laurent"];
+        localStorage.setItem('prenoms',JSON.stringify (prenoms));
+
+        const listPrenom = localStorage.getItem('prenoms');
+        listPrenom = JSON.parse(listPrenom);
+        document.write(typeof listPrenom);
+        // localStorage.clear(); -> pour effacer 
+
+        sessionStorage.setItem("sessionID", "je suis une session storage");
+    </script>
+</body>
+</html>

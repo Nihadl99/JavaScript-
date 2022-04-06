@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, ::before, ::after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:rgb(206, 184, 157);
+            color: white;
+        
+        }
+        p{
+            font-size: 4 rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+        <spam id="hour">14</spam> :
+        <spam id="minute">33</spam> :
+        <spam id="second">12</spam>
+        </p>
+    </div>
+
+    <script>
+        const hourSpan = document.getElementById('hour');
+        const minnuteSpan = document.getElementById('minute');
+        const secondSpan = document.getElementById('second');
+
+        function getTime(){
+            const date = new Date();
+            if (hourSpan.innerHTML !== inf10TwoChar(date.getHours())){;//to string change l'information 
+                hourSpan.innerHTML = inf10TwoChar(date.getHours());
+            }
+            if (minnuteSpan.innerHTML !== inf10TwoChar(date.getMinutes()));{
+                minnuteSpan.innerHTML = inf10TwoChar(date.getMinutes());
+            }    
+            secondSpan.innerHTML = inf10TwoChar(date.getSeconds());
+        }
+
+        function inf10TwoChar(date){
+            return date < 10 ? `0${date}`: date.toString();
+
+        }
+        getTime();
+
+        setInterval(getTime, 1000);
+    </script>
+</body>
+</html>
